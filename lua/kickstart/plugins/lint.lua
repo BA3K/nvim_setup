@@ -7,6 +7,7 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        pyright = { 'pyright' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
@@ -30,7 +31,7 @@ return {
       -- }
       --
       -- You can disable the default linters by setting their filetypes to nil:
-      -- lint.linters_by_ft['clojure'] = nil
+      lint.linters_by_ft['pyright'] = { 'pyright' }
       -- lint.linters_by_ft['dockerfile'] = nil
       -- lint.linters_by_ft['inko'] = nil
       -- lint.linters_by_ft['janet'] = nil
